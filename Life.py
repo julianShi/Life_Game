@@ -2,6 +2,8 @@ import numpy as np
 
 
 class Solution:
+    print('Enter seeds location:')
+    M=input()
     def life(self, M):
         L = len(M)
         M = np.array(M)
@@ -22,6 +24,7 @@ class Solution:
                 if M[i, j] == 0 and np.count_nonzero(sub_matrix == 1) == 3:
                     X[i, j] = 1
         return X
+    print("here is the next day patten")
 
 
 if __name__ == '__main__':
