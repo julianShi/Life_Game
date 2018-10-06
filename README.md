@@ -8,7 +8,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 
 ## Demo
 ![baidu](https://en.wikipedia.org/wiki/File:Game_of_life_block_with_border.svg)
-!https://en.wikipedia.org/wiki/File:Game_of_life_beehive.svg
+!(https://en.wikipedia.org/wiki/File:Game_of_life_beehive.svg)
 !https://en.wikipedia.org/wiki/File:Game_of_life_loaf.svg
 !https://en.wikipedia.org/wiki/File:Game_of_life_boat.svg
 !https://en.wikipedia.org/wiki/File:Game_of_life_flower.svg
