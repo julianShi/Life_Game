@@ -14,5 +14,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 Input a 2D matrix M
 Output a 2D matrix X
 
-## Abont Me
+## About Me
 [Website](https://superfastfox.weebly.com/blog)
+
+![baidu](http://www.baidu.com/img/bdlogo.gif "
