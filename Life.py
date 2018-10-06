@@ -1,37 +1,44 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 
-class Solution:
-    print('Enter seeds location:')
-    M=input()
-    def life(self, M):
-        L = len(M)
-        M = np.array(M)
-        X = np.zeros((L, L))
-        for i in range(1, L - 1):
-            for j in range(1, L - 1):
-                sub_matrix = M[i - 1:i + 2, j - 1: j + 2]
-                # 当前细胞为存活状态时，当周围的存活细胞低于2个时（不包含2个）， 该细胞变成死亡状态。（模拟生命数量稀少）
-                if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) < 2:
-                    X[i, j] = 0
-                # 当前细胞为存活状态时，当周围有2个或3个存活细胞时， 该细胞保持原样。
-                if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) in (2, 3):
-                    X[i, j] = M[i, j]
-                # 当前细胞为存活状态时，当周围有3个以上的存活细胞时，该细胞变成死亡状态。（模拟生命数量过多）
-                if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) > 3:
-                    X[i, j] = 0
-                # 当前细胞为死亡状态时，当周围有3个存活细胞时，该细胞变成存活状态。 （模拟繁殖）
-                if M[i, j] == 0 and np.count_nonzero(sub_matrix == 1) == 3:
-                    X[i, j] = 1
-        return X
-    print("here is the next day patten")
+def life():
+    # print('Enter seeds location:')
+    # M = eval(input())
+
+    # For test
+    M = [[1, 0, 1, 1, 1],
+         [0, 0, 0, 1, 0],
+         [0, 0, 1, 0, 0],
+         [0, 1, 1, 1, 0],
+         [0, 0, 1, 0, 0]]
+    M = np.pad(M, ((1, 1), (1, 1)), 'constant')
+    M = np.array(M)
+    L, W = np.shape(M)
+    X = np.zeros((L, W))
+    for i in range(1, L - 1):
+        for j in range(1, W - 1):
+            sub_matrix = M[i - 1:i + 2, j - 1:j + 2]
+            # Any live cell with fewer than two live neighbors dies, as if by underpopulation
+            if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) < 2:
+                X[i, j] = 0
+            # Any live cell with two or three live neighbors lives on to the next generation
+            if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) in (2, 3):
+                X[i, j] = M[i, j]
+            # Any live cell with more than three live neighbors dies, as if by overpopulation
+            if M[i, j] == 1 and np.count_nonzero(sub_matrix == 1) > 3:
+                X[i, j] = 0
+            # Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction
+            if M[i, j] == 0 and np.count_nonzero(sub_matrix == 1) == 3:
+                X[i, j] = 1
+    X = X[1:L - 1, 1:W - 1]
+    print("here is the next patten")
+    print(X)
+    img = plt.imshow(X)
+    img.set_cmap('winter')
+    plt.show()
+    return X
 
 
-if __name__ == '__main__':
-    print(Solution().life([[0, 0, 0, 0, 0, 0, 0],
-                           [0, 1, 0, 1, 1, 1, 0],
-                           [0, 0, 0, 0, 1, 0, 0],
-                           [0, 0, 0, 1, 0, 0, 0],
-                           [0, 0, 1, 1, 1, 0, 0],
-                           [0, 0, 0, 1, 0, 0, 0],
-                           [0, 0, 0, 0, 0, 0, 0]]))
+# Run file
+life()
