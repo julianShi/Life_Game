@@ -7,7 +7,7 @@ Any live cell with more than three live neighbors dies, as if by overpopulation.
 Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
 ## Demo
-[demo]:https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+[demo](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 
 ## Usage
