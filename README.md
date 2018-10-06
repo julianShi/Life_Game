@@ -7,7 +7,7 @@ Any live cell with more than three live neighbors dies, as if by overpopulation.
 Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.  
 
 ## Demo
-![](https://raw.githubusercontent.com/guodongxiaren/ImageCache/master/Logo/foryou.gif)
+![](https://github.com/Louis24/Life_Game/blob/master/Gospers_glider_gun.gif)
 
 ## Usage
 Input a 2D matrix M
