@@ -17,4 +17,4 @@ Output a 2D matrix X
 ## About Me
 [Website](https://superfastfox.weebly.com/blog)
 
-[qq](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_block_with_border.svg)
+![Alt text](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_block_with_border.svg)
