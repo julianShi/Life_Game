@@ -8,7 +8,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 [wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)  
 
 ## Demo
-!https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Gospers_glider_gun.gif
+![]https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Gospers_glider_gun.gif
 
 ## Usage
 Input a 2D matrix M
