@@ -1,5 +1,17 @@
 # Life_Game
 
+## Requirements
+```shell
+pip install numpy
+pip install matplotlib
+```
+
+## Run
+Simply run the `test.py` for demo. 
+```shell
+python test.py
+```
+
 ## Conditions
 Any live cell with fewer than two live neighbors dies, as if by underpopulation.  
 Any live cell with two or three live neighbors lives on to the next generation.  
